@@ -1,15 +1,71 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   Design Tokens
+========================== */
+
 :root{
 
-    --primary:#4cc9f0;
+    /* Brand Colors */
 
-    --background:#0f172a;
+    --primary:#3B82F6;
+    --primary-hover:#2563EB;
 
-    --card:#1e293b;
+    --secondary:#06B6D4;
 
-    --text:white;
+    --background:#0F172A;
 
-    --secondary-text:#cbd5e1;
+    --surface:#1E293B;
 
-    --radius:12px;
+    --card:#FFFFFF;
 
+    --text:#FFFFFF;
+
+    --text-secondary:#CBD5E1;
+
+    --text-dark:#1E293B;
+
+    /* Border Radius */
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:22px;
+
+    /* Shadows */
+
+    --shadow-sm:0 5px 15px rgba(0,0,0,.08);
+    --shadow-md:0 12px 30px rgba(0,0,0,.15);
+    --shadow-lg:0 25px 50px rgba(0,0,0,.25);
+
+    /* Animation */
+
+    --transition:.3s ease;
+}
+
+/* =========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--background);
+    color:var(--text);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+    border:none;
 }

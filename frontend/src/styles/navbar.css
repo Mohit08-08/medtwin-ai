@@ -8,31 +8,55 @@
 
     padding:20px 70px;
 
-    background:#07142a;
-
-    color:white;
-
     position:sticky;
 
     top:0;
 
-    z-index:100;
+    z-index:1000;
+
+    background:rgba(15,23,42,0.75);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    transition:var(--transition);
 }
+
+/* =========================
+   Logo
+========================= */
 
 .logo{
 
-    font-size:30px;
+    font-size:32px;
 
-    font-weight:bold;
+    font-weight:700;
 
-    color:#4cc9f0;
+    color:var(--secondary);
+
+    cursor:pointer;
+
+    transition:var(--transition);
 }
+
+.logo:hover{
+
+    color:var(--primary);
+
+}
+
+/* =========================
+   Navigation Links
+========================= */
 
 .nav-links{
 
     display:flex;
 
-    gap:35px;
+    gap:40px;
 
     list-style:none;
 
@@ -40,35 +64,126 @@
 
 .nav-links li{
 
+    position:relative;
+
     cursor:pointer;
 
-    transition:.3s;
+    color:var(--text);
+
+    font-weight:500;
+
+    transition:var(--transition);
+
 }
+
+/* Hover Text Color */
 
 .nav-links li:hover{
 
-    color:#4cc9f0;
+    color:var(--secondary);
 
 }
 
+/* Animated Underline */
+
+.nav-links li::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    transition:var(--transition);
+
+}
+
+.nav-links li:hover::after{
+
+    width:100%;
+
+}
+
+/* =========================
+   Login Button
+========================= */
+
 .login-btn{
 
-    padding:12px 24px;
+    padding:12px 28px;
 
-    background:#4cc9f0;
+    background:var(--primary);
 
-    color:black;
+    color:white;
 
     border:none;
 
-    border-radius:8px;
+    border-radius:var(--radius-sm);
+
+    font-weight:600;
 
     cursor:pointer;
 
-    font-weight:bold;
+    transition:var(--transition);
+
 }
 
 .login-btn:hover{
 
-    background:white;
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(59,130,246,0.4);
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        padding:20px 30px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
 }

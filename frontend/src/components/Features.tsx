@@ -1,3 +1,5 @@
+import "../styles/features.css";
+
 function Features() {
   return (
     <section className="features">
@@ -7,36 +9,30 @@ function Features() {
       <div className="feature-container">
 
         <div className="feature-card">
-          <h3>📄 Smart Report Analysis</h3>
-
+          <h3>🧠 AI Health Insights</h3>
           <p>
-            Upload your blood tests, prescriptions and health reports.
-            AI instantly extracts important insights.
+            Analyze health data and receive intelligent preventive healthcare recommendations.
           </p>
         </div>
 
         <div className="feature-card">
-          <h3>📊 Health Tracking</h3>
-
+          <h3>📊 Digital Twin</h3>
           <p>
-            Track health trends over time and understand your body's
-            progress through interactive analytics.
+            Build a virtual health profile to monitor wellness and detect potential risks early.
           </p>
         </div>
 
         <div className="feature-card">
-          <h3>🤖 Digital Twin</h3>
-
+          <h3>🔒 Secure Records</h3>
           <p>
-            Create your intelligent digital health twin and receive
-            preventive healthcare recommendations.
+            Your medical information is protected using secure storage and privacy-first practices.
           </p>
         </div>
 
       </div>
 
     </section>
-  )
+  );
 }
 
-export default Features
+export default Features;
