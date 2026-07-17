@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import '../styles/navbar.css'
 
 function Navbar() {
   return (
     <nav className="navbar">
 
-      <div className="logo">
-        MedTwin AI
-      </div>
+      <Link to="/" className="logo">
+  MedTwin AI
+</Link>
 
       <ul className="nav-links">
 
@@ -20,9 +21,9 @@ function Navbar() {
 
       </ul>
 
-      <button className="login-btn">
-        Login
-      </button>
+      <Link to="/login">
+  <button>Login</button>
+</Link>
 
     </nav>
   )
